@@ -73,13 +73,13 @@ namespace CliUniversalConsole.Services.Soap
                 {
                     var movimiento = new MovimientoDetalle
                     {
-                        CodigoCuenta = returnElement.Element("CodigoCuenta")?.Value ?? "",
-                        NumeroMovimiento = int.Parse(returnElement.Element("NumeroMovimiento")?.Value ?? "0"),
-                        Fecha = DateTime.Parse((returnElement.Element("Fecha")?.Value ?? DateTime.Now.ToString()).Replace("[UTC]", "")),
-                        TipoMovimiento = returnElement.Element("TipoMovimiento")?.Value ?? "",
-                        EmpleadoNombre = returnElement.Element("EmpleadoNombre")?.Value ?? "",
-                        CuentaReferencia = returnElement.Element("CuentaReferencia")?.Value,
-                        Importe = decimal.Parse(returnElement.Element("Importe")?.Value ?? "0")
+                        CodigoCuenta = returnElement.Element("codigoCuenta")?.Value ?? "",
+                        NumeroMovimiento = int.Parse(returnElement.Element("numeroMovimiento")?.Value ?? "0"),
+                        Fecha = DateTime.Parse((returnElement.Element("fecha")?.Value ?? DateTime.Now.ToString()).Replace("[UTC]", "")),
+                        TipoMovimiento = returnElement.Element("tipoMovimiento")?.Value ?? "",
+                        EmpleadoNombre = returnElement.Element("empleadoNombre")?.Value ?? "",
+                        CuentaReferencia = returnElement.Element("cuentaReferencia")?.Value,
+                        Importe = decimal.Parse(returnElement.Element("importe")?.Value ?? "0")
                     };
                     movimientos.Add(movimiento);
                 }
