@@ -21,7 +21,7 @@ namespace CliUniversalConsole.Services.Soap
             try
             {
                 var soapEnvelope = $@"
-<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:tem=""http://tempuri.org/"" xmlns:eur=""http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs"">
+<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:tem=""http://tempuri.org/"" xmlns:eur=""http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs"">
    <soap:Header/>
    <soap:Body>
       <tem:RealizarDeposito>
@@ -68,7 +68,7 @@ namespace CliUniversalConsole.Services.Soap
             try
             {
                 var soapEnvelope = $@"
-<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:tem=""http://tempuri.org/"" xmlns:eur=""http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs"">
+<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:tem=""http://tempuri.org/"" xmlns:eur=""http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs"">
    <soap:Header/>
    <soap:Body>
       <tem:RealizarRetiro>
@@ -115,7 +115,7 @@ namespace CliUniversalConsole.Services.Soap
             try
             {
                 var soapEnvelope = $@"
-<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:tem=""http://tempuri.org/"" xmlns:eur=""http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs"">
+<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:tem=""http://tempuri.org/"" xmlns:eur=""http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs"">
    <soap:Header/>
    <soap:Body>
       <tem:RealizarTransferencia>
@@ -164,7 +164,7 @@ namespace CliUniversalConsole.Services.Soap
             {
                 var xdoc = XDocument.Parse(xmlResponse);
                 XNamespace tem = "http://tempuri.org/";
-                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs";
+                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs";
 
                 var resultElement = xdoc.Descendants(tem + "RealizarDepositoResult").FirstOrDefault();
                 if (resultElement == null)
@@ -204,7 +204,7 @@ namespace CliUniversalConsole.Services.Soap
             {
                 var xdoc = XDocument.Parse(xmlResponse);
                 XNamespace tem = "http://tempuri.org/";
-                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs";
+                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs";
 
                 var resultElement = xdoc.Descendants(tem + "RealizarRetiroResult").FirstOrDefault();
                 if (resultElement == null)
@@ -249,7 +249,7 @@ namespace CliUniversalConsole.Services.Soap
             {
                 var xdoc = XDocument.Parse(xmlResponse);
                 XNamespace tem = "http://tempuri.org/";
-                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs";
+                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs";
 
                 var resultElement = xdoc.Descendants(tem + "RealizarTransferenciaResult").FirstOrDefault();
                 if (resultElement == null)

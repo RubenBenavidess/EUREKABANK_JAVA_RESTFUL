@@ -61,7 +61,7 @@ namespace CliUniversalConsole.Services.Soap
             {
                 var xdoc = XDocument.Parse(xmlResponse);
                 XNamespace tem = "http://tempuri.org/";
-                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01.Models.DTOs";
+                XNamespace a = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05.Models.DTOs";
 
                 var movimientos = new List<MovimientoDetalle>();
 

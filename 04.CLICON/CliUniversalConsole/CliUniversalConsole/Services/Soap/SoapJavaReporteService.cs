@@ -71,11 +71,12 @@ namespace CliUniversalConsole.Services.Soap
 
                 foreach (var returnElement in returnElements)
                 {
+                    var fechaText = returnElement.Element("fecha")?.Value;
                     var movimiento = new MovimientoDetalle
                     {
                         CodigoCuenta = returnElement.Element("codigoCuenta")?.Value ?? "",
                         NumeroMovimiento = int.Parse(returnElement.Element("numeroMovimiento")?.Value ?? "0"),
-                        Fecha = DateTime.Parse((returnElement.Element("fecha")?.Value ?? DateTime.Now.ToString()).Replace("[UTC]", "")),
+                        Fecha = DateTime.TryParse(fechaText, out var fecha) ? fecha : DateTime.MinValue,
                         TipoMovimiento = returnElement.Element("tipoMovimiento")?.Value ?? "",
                         EmpleadoNombre = returnElement.Element("empleadoNombre")?.Value ?? "",
                         CuentaReferencia = returnElement.Element("cuentaReferencia")?.Value,

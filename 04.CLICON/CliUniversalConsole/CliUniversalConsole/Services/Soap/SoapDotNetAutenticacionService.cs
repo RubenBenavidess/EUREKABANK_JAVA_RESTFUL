@@ -55,7 +55,7 @@ namespace CliUniversalConsole.Services.Soap
             {
                 var doc = XDocument.Parse(soapResponse);
                 XNamespace tem = "http://tempuri.org/";
-                XNamespace ns = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR01";
+                XNamespace ns = "http://schemas.datacontract.org/2004/07/EurekaBank_Soap_DotNet_GR05";
 
                 var loginResponse = doc.Descendants(tem + "LoginResponse").FirstOrDefault();
                 if (loginResponse == null)
